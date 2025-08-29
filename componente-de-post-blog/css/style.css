@@ -1,0 +1,159 @@
+/* 1. ESTILOS GERAIS PARA A PÁGINA */
+
+body {
+
+    font-family: 'Lato', sans-serif; /* Uma fonte sans-serif moderna */
+
+    background-color: #f0f4f8;
+
+   
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 20px; /* Adiciona um respiro caso a tela seja pequena */
+
+}
+
+ 
+
+ 
+
+/* 2. O COMPONENTE DO POST - O FOCO DO NOSSO ESTUDO! */
+
+.post-card {
+
+    /* ----- A MÁGICA DO FLEXBOX COMEÇA AQUI ----- */
+
+    /*
+
+     * Ao declarar "display: flex", este elemento (.post-card)
+
+     * se torna um "Flex Container".
+
+     *
+
+     * Por padrão, todos os seus filhos diretos (a <img> e a <div>)
+
+     * se tornarão "Flex Items" e tentarão se alinhar em uma ÚNICA LINHA.
+
+     */
+
+    display: flex;
+
+   
+
+    /*
+
+     * "align-items: center" alinha os filhos verticalmente no centro
+
+     * do container. Experimente comentar esta linha e veja a diferença!
+
+     */
+
+    align-items: center;
+
+ 
+
+    /*
+
+     * "gap" é uma propriedade do Flexbox que cria um espaçamento
+
+     * consistente ENTRE os itens filhos. É muito mais simples
+
+     * do que usar margem em um dos filhos.
+
+     */
+
+    gap: 20px;
+
+   
+
+    /* ----- Estilos visuais do card (já conhecidos) ----- */
+
+    width: 100%; /* Ocupa 100% do seu pai (o body, neste caso) */
+
+    max-width: 700px; /* Mas não passa de 700px, para não ficar muito largo em telas grandes */
+
+    background-color: #ffffff;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+    overflow: hidden; /* Garante que a imagem respeite os cantos arredondados */
+
+}
+
+ 
+
+ 
+
+/* 3. ESTILOS DOS ITENS FILHOS DO FLEXBOX */
+
+.post-image {
+
+    /* Define que a imagem terá uma largura fixa de 200px
+
+     * e não irá crescer ou encolher.
+
+     */
+
+    width: 200px;
+
+    height: 200px; /* Altura fixa para um visual quadrado */
+
+   
+
+    /* Garante que a imagem cubra o espaço sem distorcer.
+
+     * Requer uma altura e largura fixas para funcionar bem.
+
+     */
+
+    object-fit: cover;
+
+}
+
+ 
+
+.post-content {
+
+    /* O padding é aplicado aqui para dar espaço interno ao texto,
+
+     * mas note que ele afeta apenas o conteúdo de texto, não a imagem.
+
+     */
+
+    padding: 20px;
+
+}
+
+ 
+
+.post-title {
+
+    margin-top: 0;
+
+    margin-bottom: 10px;
+
+    color: #2d3748;
+
+}
+
+ 
+
+.post-excerpt {
+
+    margin-bottom: 0;
+
+    color: #718096;
+
+    line-height: 1.6;
+
+}
